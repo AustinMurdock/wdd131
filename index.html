@@ -8,24 +8,6 @@
     <meta name="description" content="a simple site created for a byui cs wdd131 course">
     <meta name="author" content="Austin Murdock">
     <link rel="stylesheet" href="./style.css">
-    <script>
-        const testNum = 1 + 1
-
-        function printName(a) {
-            console.log(a)
-            const el = document.getElementById("root")
-            el.textContent = 'hello_textContent' + a
-        }
-
-        const selectElement = document.getElementById("select-element")
-
-        const testButton = document.getElementById("test-button")
-        testButton.addEventListener("click", function() {
-            printName(selectElement.value);
-        });
-
-        testButton.click()
-    </script>
 </head>
 <body id="root">
     <header>
@@ -44,5 +26,21 @@
     <footer>
 
     </footer>
+    <script>
+        const testNum = 1 + 1
+
+        function printName(a) {
+            console.log(a)
+            const el = document.getElementById("root")
+            el.textContent = 'hello_textContent' + a
+        }
+
+        const selectElement = document.getElementById("select-element")
+
+        const testButton = document.getElementById("test-button")
+        testButton.addEventListener("click", function() {
+            printName(selectElement.value);
+        });
+    </script>
 </body>
 </html>
