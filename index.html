@@ -13,10 +13,17 @@
 
         function printName(a) {
             console.log(a)
-            const el = document.getElementById('root')
-            el.innerHTML = 'hello_HTML'
-            el.innerText = 'hello_Text'
-            el.textContent = 'hello_textContent'
+            const el = document.getElementById("root")
+            el.innerHTML = 'hello_HTML' + a
+            el.innerText = 'hello_Text' + a
+            el.textContent = 'hello_textContent' + a
+
+            const selectElement = document.getElementById("select-element")
+
+            const testButton = document.getElementById("test-button")
+            testButton.addEventListener("click", printName(selectElement.value))
+
+            testButton.click()
         }
     </script>
 </head>
@@ -25,7 +32,14 @@
         <h1>Austin Murdock: WDD 131 Portfolio</h1>
     </header>
     <main>
-        <button>Test</button>
+        <div>
+            <select id="select-element">
+                <option value="value-abcd">abcd</option>
+                <option value="value-efgh">efgh</option>
+                <option value="value-ijkl">ijkl</option>
+            </select>
+        </div>
+        <button id="test-button" onclick="printName(a)">Test</button>
     </main>
     <footer>
 
