@@ -32,3 +32,10 @@
     display: block;
     margin: 0 auto;
 }
+
+.dark {
+    background-color: #333;
+}
+.dark .title h3 {
+    color: #4f9acf;
+}
