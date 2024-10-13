@@ -36,6 +36,9 @@
 .dark {
     background-color: #333;
 }
+.dark :is(h1, p, li) {
+    color: white;
+}
 .dark .title h3 {
     color: #4f9acf;
 }
