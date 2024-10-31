@@ -20,7 +20,7 @@
 .title h1 {
     font-size: 40px;
 }
-.title h3 {
+.title h2 {
     color: #006eb6;
     font-size: 18px;
 }
@@ -36,9 +36,9 @@
 .dark {
     background-color: #333;
 }
-.dark :is(h1, p, li) {
+.dark :is(h1, p, li, label) {
     color: white;
 }
-.dark .title h3 {
+.dark .title h2 {
     color: #4f9acf;
 }
