@@ -1,0 +1,48 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout Form</title>
+        <link rel="stylesheet" href="w07-form-demo.css" />
+        <script src="w07-form-demo.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Checkout</h1>
+        </header>
+        <main>
+            <section class="errors"></section>
+            <form id="checkoutForm" action="completed.html">
+                <label for="name-field">Full Name:</label>
+                <input type="text" name="user-full-name" id="name-field" required>
+                
+                <label for="email-field">Email:</label>
+                <input type="email" name="user-email" id="email-field" required>
+
+                <label for="address-field">Address:</label>
+                <textarea type="text" name="user-address" id="address-field" required></textarea>
+
+                <label for="payment-type-field">Payment Method:</label>
+                <select name="user-payment-type" id="payment-type-field" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                
+                <div id="ccn-container" class="hide" required>
+                    <label for="ccn-field">Credit Card Number:</label>
+                    <input type="text" name="user-ccn" id="ccn-field" placeholder="Enter 16 digits" pattern="[0-9]{16}">
+                </div>
+                
+                <div id="paypal-name-container" class="hide" required>
+                    <label for="paypal-name-field">PayPal Username:</label>
+                    <input type="text" name="user-paypal-name" id="paypal-name-field" placeholder="Enter PayPal username">
+                </div>
+
+                 <button id="submit">Place Order</button>
+            </form>
+        </main>
+    </body>
+</html>
